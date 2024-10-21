@@ -10,7 +10,7 @@
             const valeurVar = document.getElementById('valeurVar').value;
             const data = JSON.stringify({ nomVar: nomVar, valeurVar: valeurVar });
             const iframe = document.getElementById('targetFrame');
-            iframe.contentWindow.postMessage(data, "https://thegamedevfr.github.io/site-unity/"); // Change l'URL ici pour le site cible
+            iframe.contentWindow.postMessage(data, "https://thegamedevfr.github.io/site-unity/");
         }
     </script>
 </head>
