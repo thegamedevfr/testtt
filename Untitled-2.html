@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoyer des Variables</title>
+    <script>
+        function envoyerRequete() {
+            const nomVar = document.getElementById('nomVar').value;
+            const valeurVar = document.getElementById('valeurVar').value;
+            const data = JSON.stringify({ nomVar: nomVar, valeurVar: valeurVar });
+
+            const iframe = document.getElementById('targetFrame');
+            iframe.contentWindow.postMessage(data, "http://ton-site.com"); // Change l'URL ici pour le site cible
+        }
+    </script>
+</head>
+<body>
+    <h1>Envoyer des variables à un autre site</h1>
+    <label for="nomVar">Nom de la Variable:</label>
+    <input type="text" id="nomVar" name="nomVar"><br><br>
+    <label for="valeurVar">Valeur de la Variable:</label>
+    <input type="text" id="valeurVar" name="valeurVar"><br><br>
+    <button onclick="envoyerRequete()">Envoyer la Requête</button>
+    <iframe id="targetFrame" src="http://ton-site.com/chemin/vers/le/premier/fichier.html" style="display:none;"></iframe>
+</body>
+</html>
