@@ -12,7 +12,7 @@
             const data = JSON.stringify({ nomVar: nomVar, valeurVar: valeurVar });
             console.log("Données envoyées:", data);
             const iframe = document.getElementById('targetFrame');
-            iframe.contentWindow.postMessage(data, "*");
+            iframe.contentWindow.postMessage(data, "https://thegamedevfr.github.io/site-unity/");
         }
     </script>
 </head>
