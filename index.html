@@ -9,7 +9,6 @@
             const nomVar = document.getElementById('nomVar').value;
             const valeurVar = document.getElementById('valeurVar').value;
             const data = JSON.stringify({ nomVar: nomVar, valeurVar: valeurVar });
-
             const iframe = document.getElementById('targetFrame');
             iframe.contentWindow.postMessage(data, "https://thegamedevfr.github.io/site-unity/"); // Change l'URL ici pour le site cible
         }
@@ -22,6 +21,6 @@
     <label for="valeurVar">Valeur de la Variable:</label>
     <input type="text" id="valeurVar" name="valeurVar"><br><br>
     <button onclick="envoyerRequete()">Envoyer la Requête</button>
-    <iframe id="targetFrame" src="http://ton-site.com/chemin/vers/le/premier/fichier.html" style="display:none;"></iframe>
+    <iframe id="targetFrame" src="https://thegamedevfr.github.io/site-unity/" style="display:none;"></iframe>
 </body>
 </html>
